@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework-1</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Task Management Application</h1>
+    </header>
+    <p>
+      <button id="showDialog">Add a task</button>
+    </p>
+    <dialog id="favDialog">
+      <form action="" method="dialog" class="form-example">
+        <div class="form-example">
+          <label for="name">Title: </label>
+          <input type="text" name="name" id="name" required />
+        </div>
+        <div class="form-example">
+          <textarea rows="4" cols="50" name="comment" form="usrform">
+                    Enter text here...</textarea
+          >
+        </div>
+
+        <div class="form-example">
+          <label for="email">Enter your email: </label>
+          <input type="email" name="email" id="email" required />
+        </div>
+      </form>
+      <div>
+        <button value="cancel" formmethod="dialog">Cancel</button>
+        <button id="confirmBtn" value="default">Confirm</button>
+      </div>
+    </dialog>
+
+    <output></output>
+
+    <script src="index.js"></script>
+  </body>
+</html>
