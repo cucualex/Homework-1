@@ -6,38 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homework-1</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background-image: url("/Homework-1/imgbin-refrigerator-home-appliance-refrigerator-WzRUdN8ZzEbZVjDcTMWpcTME1-removebg-preview.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 3800px;
+        background-position-x: -1287px;
+        background-position-y: -201px;
+        background-color: bisque;
+      }
+    </style>
   </head>
   <body>
     <header>
       <h1>Task Management Application</h1>
     </header>
-    <p>
-      <button id="showDialog">Add a task</button>
-    </p>
-    <dialog id="favDialog">
-      <form action="" method="dialog" class="form-example">
-        <div class="form-example">
-          <label for="name">Title: </label>
-          <input type="text" name="name" id="name" required />
-        </div>
-        <div class="form-example">
-          <textarea rows="4" cols="50" name="comment" form="usrform">
-                    Enter text here...</textarea
-          >
-        </div>
 
-        <div class="form-example">
-          <label for="email">Enter your email: </label>
-          <input type="email" name="email" id="email" required />
-        </div>
+    <button id="addTaskButton">Add Task</button>
+
+    <dialog id="taskFormDialog">
+      <form id="taskForm">
+        <label for="taskTitle">Task Title:</label>
+        <input
+          type="text"
+          id="taskTitle"
+          maxlength="50"
+          pattern="^[A-Za-z0-9\s]+$"
+          required
+        />
+        <br />
+        <label for="taskDescription">Task Description:</label>
+        <textarea id="taskDescription" maxlength="250" required></textarea>
+        <br />
+        <label for="assigneeEmail">Assignee Email:</label>
+        <input type="email" id="assigneeEmail" required />
+        <br />
+        <button type="button" id="cancelBtn">Cancel</button>
+        <button type="submit">Add Task</button>
       </form>
-      <div>
-        <button value="cancel" formmethod="dialog">Cancel</button>
-        <button id="confirmBtn" value="default">Confirm</button>
-      </div>
     </dialog>
 
-    <output></output>
+    <ul id="taskList">
+      <!-- Tasks will be added dynamically here -->
+    </ul>
 
     <script src="index.js"></script>
   </body>

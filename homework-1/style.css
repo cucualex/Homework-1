@@ -1,0 +1,157 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+#addTaskButton {
+  margin-left: 700px;
+  margin-top: 30px;
+}
+button {
+  align-self: center;
+  background-color: #fff;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #41403e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Neucha, sans-serif;
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: 0.75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+.button:focus {
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  padding: 2;
+  width: 200px;
+  height: 210px;
+}
+
+li {
+  margin: 30px;
+  padding: 20px;
+
+  /* Additional styles for task items */
+  list-style: none;
+  margin: 10px;
+  padding: 10px;
+
+  border-radius: 5px;
+  position: relative;
+  background-image: url("/Homework-1/card-postit-note-paper-envelope-label-sticker-paper-product-beige-png-clipart-removebg-preview\ \(1\).png");
+  /* Schimbați "path/to/background-image.jpg" cu calea către imaginea dorită */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.3s ease-in-out;
+}
+.task-buttons {
+  /* Container for buttons */
+  display: flex;
+  gap: 5px;
+  position: absolute;
+  top: 120px;
+  right: 5px;
+}
+
+.completeBtn,
+.deleteBtn {
+  /* Styles for buttons */
+  font-size: 14px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.completeBtn {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.deleteBtn {
+  background-color: #f44336;
+  color: #fff;
+}
+#taskFormDialog {
+  background-color: #fffbdb;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: auto;
+  z-index: 1000;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr; /* Each form element takes up one column */
+  grid-gap: 10px;
+}
+
+.form label {
+  font-weight: bold;
+}
+
+.form input[type="text"],
+.form textarea,
+.form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form textarea {
+  resize: none;
+}
+
+.form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form button#cancelBtn {
+  background-color: #ccc;
+}
+.completed {
+  text-decoration: line-through;
+  background-color: #e1f7d7; /* Light green color for completed tasks */
+}
