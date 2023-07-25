@@ -8,26 +8,25 @@
     <link rel="stylesheet" href="style.css" />
     <style>
       body {
-        background-image: url("/Homework-1/imgbin-refrigerator-home-appliance-refrigerator-WzRUdN8ZzEbZVjDcTMWpcTME1-removebg-preview.png");
+        background-image: url("/Homework-1/bucatarie\ \(2\).png");
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-size: 3800px;
-        background-position-x: -1287px;
-        background-position-y: -201px;
-        background-color: bisque;
+        background-size: 2860px;
+        background-position-x: -780px;
+        background-position-y: -150px;
+        background-color: antiquewhite;
       }
     </style>
   </head>
   <body>
     <header>
-      <h1>Task Management Application</h1>
+      <h1>ADAUGA TASKURI =></h1>
+      <button id="addTaskButton">Add Task</button>
     </header>
-
-    <button id="addTaskButton">Add Task</button>
 
     <dialog id="taskFormDialog">
       <form id="taskForm">
-        <label for="taskTitle">Task Title:</label>
+        <label class="taskTitle" for="taskTitle">Task Title:</label>
         <input
           type="text"
           id="taskTitle"
@@ -39,11 +38,13 @@
         <label for="taskDescription">Task Description:</label>
         <textarea id="taskDescription" maxlength="250" required></textarea>
         <br />
-        <label for="assigneeEmail">Assignee Email:</label>
+        <label for="assigneeEmail">Email:</label>
         <input type="email" id="assigneeEmail" required />
         <br />
-        <button type="button" id="cancelBtn">Cancel</button>
-        <button type="submit">Add Task</button>
+        <div class="buttonsForm">
+          <button type="button" id="cancelBtn">Cancel</button>
+          <button type="submit" id="confirmBtn">Add Task</button>
+        </div>
       </form>
     </dialog>
 

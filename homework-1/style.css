@@ -1,16 +1,23 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Times New Roman", Times, serif, sans-serif;
   margin: 20px;
+  font-style: italic;
+  color: black;
 }
+
 header {
+  display: flex;
   text-align: center;
-  margin-bottom: 20px;
-}
-#addTaskButton {
-  margin-left: 700px;
+  justify-content: center;
+  width: 420px;
+  position: relative;
+  margin-left: 87px;
   margin-top: 30px;
 }
-button {
+
+#addTaskButton,
+#cancelBtn,
+#confirmBtn {
   align-self: center;
   background-color: #fff;
   background-image: none;
@@ -36,37 +43,96 @@ button {
   border-bottom-right-radius: 225px 15px;
   border-top-left-radius: 255px 15px;
   border-top-right-radius: 15px 225px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
 }
 
-.button:hover {
+#addTaskButton,
+#cancelBtn,
+#confirmBtn :hover {
   box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
   transform: translate3d(0, 2px, 0);
 }
 
-.button:focus {
+#addTaskButton,
+#cancelBtn,
+#confirmBtn :focus {
   box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+}
+
+#taskFormDialog {
+  background-color: #fffbdb;
+  padding: 20px;
+
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: auto;
+  z-index: 1000;
+}
+.task-buttons {
+  /* Container for buttons */
+  display: flex;
+  gap: 5px;
+  position: absolute;
+  top: 160px;
+  right: 5px;
+}
+
+.completeBtn {
+  /* background-color: #4caf50; */
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  /* background-color: #f44336; */
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+  background-color: #e1f7d7;
+}
+li.completed {
+  /* You can customize these styles to make completed tasks visually distinct */
+  background-color: #e1f7d7; /* Light green color for completed tasks */
+  border: 2px solid #4caf50; /* Green border for completed tasks */
+  box-shadow: rgba(0, 128, 0, 0.4) 0 0 8px; /* Green shadow for completed tasks */
+  color: #555; /* Text color for completed tasks */
+}
+
+label {
+  font-size: 2rem;
+}
+input {
+  width: 150px;
+}
+#taskDescription {
+  margin-top: 20px;
+  font-size: 13px;
+  resize: none;
+}
+.buttonsForm {
+  padding-top: 20px;
 }
 
 ul {
   display: flex;
   list-style: none;
   padding: 2;
-  width: 200px;
-  height: 210px;
+  width: 250px;
+  height: 250px;
 }
 
 li {
   margin: 30px;
   padding: 20px;
-
+  font-size: 50px;
   /* Additional styles for task items */
   list-style: none;
-  margin: 10px;
-  padding: 10px;
-
+  margin: auto;
   border-radius: 5px;
   position: relative;
   background-image: url("/Homework-1/card-postit-note-paper-envelope-label-sticker-paper-product-beige-png-clipart-removebg-preview\ \(1\).png");
@@ -76,82 +142,12 @@ li {
   background-repeat: no-repeat;
   transition: background-image 0.3s ease-in-out;
 }
-.task-buttons {
-  /* Container for buttons */
+
+strong,
+p {
   display: flex;
-  gap: 5px;
-  position: absolute;
-  top: 120px;
-  right: 5px;
-}
-
-.completeBtn,
-.deleteBtn {
-  /* Styles for buttons */
-  font-size: 14px;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.completeBtn {
-  background-color: #4caf50;
-  color: #fff;
-}
-
-.deleteBtn {
-  background-color: #f44336;
-  color: #fff;
-}
-#taskFormDialog {
-  background-color: #fffbdb;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  max-width: 400px;
-  margin: auto;
-  z-index: 1000;
-}
-
-.form {
-  display: grid;
-  grid-template-columns: 1fr; /* Each form element takes up one column */
-  grid-gap: 10px;
-}
-
-.form label {
-  font-weight: bold;
-}
-
-.form input[type="text"],
-.form textarea,
-.form input[type="email"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.form textarea {
-  resize: none;
-}
-
-.form button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.form button#cancelBtn {
-  background-color: #ccc;
-}
-.completed {
-  text-decoration: line-through;
-  background-color: #e1f7d7; /* Light green color for completed tasks */
+  font-size: 1.2rem;
+  position: relative;
+  margin-left: 2rem;
+  margin-top: 1rem;
 }
